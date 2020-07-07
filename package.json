@@ -1,0 +1,28 @@
+{
+  "name": "mycli",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "engines": {
+    "node": ">=8.9"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bin": {
+    "cc": "./bin/index.js"
+  },
+  "dependencies": {
+    "chalk": "^4.0.0",
+    "commander": "^5.1.0",
+    "fs-extra": "^9.0.1",
+    "inquirer": "^7.1.0",
+    "ora": "^4.0.4",
+    "semver": "^7.3.2",
+    "shelljs": "^0.8.4",
+    "slash": "^3.0.0"
+  }
+}
