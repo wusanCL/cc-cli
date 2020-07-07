@@ -1,0 +1,36 @@
+{
+    "hooks": {
+      "after:bump": "npx auto-changelog -p"
+    },
+    "git": {
+      "changelog": "npx auto-changelog --stdout --commit-limit false",
+      "requireCleanWorkingDir": false,
+      "requireBranch": false,
+      "requireUpstream": true,
+      "requireCommits": false,
+      "addUntrackedFiles": false,
+      "commit": true,
+      "commitMessage": "version: Release ${version}",
+      "commitArgs": [],
+      "tag": true,
+      "tagName": "v${version}",
+      "tagAnnotation": "Release ${version}",
+      "tagArgs": [],
+      "push": true,
+      "pushArgs": ["--follow-tags"],
+      "pushRepo": ""
+    },
+    "npm": {
+      "publish": false
+    },
+    "github": {
+      "release": false
+    },
+    "plugins": {
+      "@release-it/conventional-changelog": {
+        "preset": "angular",
+        "infile": "CHANGELOG.md"
+      }
+    }
+  }
+  

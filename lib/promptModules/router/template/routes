@@ -1,0 +1,19 @@
+const importFiles = require.context('../views', true, /\.\/([^/]*?)\.vue$/)
+
+const routes = []
+
+importFiles.keys().forEach((name) => {
+    var obj = importFiles(name).default
+
+    const router = Object.assign({},{
+        path: '/' + obj.name,
+        component: obj,
+        name: obj.name
+    },obj._router || {})
+
+    routes.push(router)
+})
+
+export default routes
+
+

@@ -1,0 +1,12 @@
+module.exports = {
+  plugins: {
+    autoprefixer: {},
+    'postcss-pxtorem': {
+      rootValue: 32,
+      propList: ['*','!font-size','!letter-spacing'],
+      selectorBlackList:['html','body'],
+      mediaQuery:false,
+      minPixelValue:-100
+    }
+  }
+}
